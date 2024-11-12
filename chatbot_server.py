@@ -42,7 +42,6 @@ async def answer_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         logging.error(f"Error generating response: {e}")
         await update.message.reply_text("An error occurred while generating a response.")
     
-                                    
 #----------------------------------------------------------------
 #Main Loop
 def main():
@@ -55,10 +54,6 @@ def main():
 
     #Advanced Handlers
     application.add_handler(CommandHandler('ask', answer_command))
-
-    
-
-
 
     application.run_polling()
 
